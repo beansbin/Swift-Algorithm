@@ -17,10 +17,10 @@
 |<center>**21/12/29**</center> | <center> [백준 B1 1110 더하기 사이클](https://beansbin.oopy.io/5b9595ae-3ddf-4eab-8356-a7e6db5d49d1)</center> |
 |<center>**21/12/29**</center> | <center> [백준 B3 10181 최소, 최대](https://beansbin.oopy.io/322bc5a9-83d3-4b12-bf9d-26a80d45dca4)</center> |
 |<center>**21/12/29**</center> | <center> [백준 B2 2562 최댓값](https://beansbin.oopy.io/0c296cba-77c8-451b-b9dc-ec6de3a2d945)</center> |
-|<center>**21/12/29**</center> | <center> [백준 B2 2577 숫자의 개수(https://beansbin.oopy.io/617f0915-4f17-49bf-915e-7814929d4dc9)</center> |
-|<center>**21/12/29**</center> | <center> [백준 B1 4344 평균은 넘겠지](https://beansbin.oopy.io/035d932e-077c-41ae-98fb-9809ee89f67e)</center> |
-|<center>**21/12/29**</center> | <center> [백준 S5 4673 셀프 넘버](https://beansbin.oopy.io/84f19250-f7de-4e62-a065-8a2d780346d9)</center> |
-|<center>**21/12/29**</center> | <center> [백준 S4 1065 한수](https://beansbin.oopy.io/f1456830-bd6c-48b3-832c-4ec2c6d30948)</center> |
+|<center>**22/1/1**</center> | <center> [백준 B2 2577 숫자의 개수(https://beansbin.oopy.io/617f0915-4f17-49bf-915e-7814929d4dc9)</center> |
+|<center>**22/1/3**</center> | <center> [백준 B1 4344 평균은 넘겠지](https://beansbin.oopy.io/035d932e-077c-41ae-98fb-9809ee89f67e)</center> |
+|<center>**22/1/4**</center> | <center> [백준 S5 4673 셀프 넘버](https://beansbin.oopy.io/84f19250-f7de-4e62-a065-8a2d780346d9)</center> |
+|<center>**22/1/25**</center> | <center> [백준 S4 1065 한수](https://beansbin.oopy.io/f1456830-bd6c-48b3-832c-4ec2c6d30948)</center> |
 
 
 
