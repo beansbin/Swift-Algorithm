@@ -21,8 +21,8 @@
 |<center>**22/1/3**</center> | <center> [백준 B1 4344 평균은 넘겠지](https://beansbin.oopy.io/035d932e-077c-41ae-98fb-9809ee89f67e)</center> |
 |<center>**22/1/4**</center> | <center> [백준 S5 4673 셀프 넘버](https://beansbin.oopy.io/84f19250-f7de-4e62-a065-8a2d780346d9)</center> |
 |<center>**22/1/5**</center> | <center> [백준 S4 1065 한수](https://beansbin.oopy.io/f1456830-bd6c-48b3-832c-4ec2c6d30948)</center> |
-|<center>**22/1/5**</center> | <center> [백준 B2 10809 알파벳 찾기](https://beansbin.oopy.io/55c86a68-1379-4b61-9f5f-4d7d02afe3e7)</center> |
-|<center>**22/1/5**</center> | <center> [백준 B1 1157 단어공부](https://beansbin.oopy.io/55c86a68-1379-4b61-9f5f-4d7d02afe3e7)</center> |
+|<center>**22/1/7**</center> | <center> [백준 B2 10809 알파벳 찾기](https://beansbin.oopy.io/55c86a68-1379-4b61-9f5f-4d7d02afe3e7)</center> |
+|<center>**22/2/4**</center> | <center> [백준 B1 1157 단어공부](https://beansbin.oopy.io/55c86a68-1379-4b61-9f5f-4d7d02afe3e7)</center> |
 
 
 
