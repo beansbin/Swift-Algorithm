@@ -23,6 +23,8 @@
 |<center>**22/1/5**</center> | <center> [백준 S4 1065 한수](https://beansbin.oopy.io/f1456830-bd6c-48b3-832c-4ec2c6d30948)</center> |
 |<center>**22/1/7**</center> | <center> [백준 B2 10809 알파벳 찾기](https://beansbin.oopy.io/55c86a68-1379-4b61-9f5f-4d7d02afe3e7)</center> |
 |<center>**22/2/4**</center> | <center> [백준 B1 1157 단어공부](https://beansbin.oopy.io/55c86a68-1379-4b61-9f5f-4d7d02afe3e7)</center> |
+|<center>**22/2/5**</center> | <center> [백준 B2 1152 단어의 개수](https://beansbin.oopy.io/9978dfcc-8339-42e6-8752-ccdea65c823e)</center> |
+
 
 
 
