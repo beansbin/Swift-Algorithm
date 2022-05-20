@@ -27,6 +27,7 @@
 |<center>**22/2/6**</center> | <center> [백준 B2 2908 상수](https://beansbin.notion.site/B2-2908-2892150288b444e08f04264a614217f3)</center> |
 |<center>**22/5/16**</center> | <center> [백준 B4 1712 손익분기점](https://beansbin.notion.site/B4-1712-8a492a77016a4bef9318a8a3b9967109)</center> |
 |<center>**22/5/16**</center> | <center> [백준 B2 2292 벌집](https://beansbin.notion.site/B4-1712-8a492a77016a4bef9318a8a3b9967109)</center> |
+|<center>**22/5/20**</center> | <center> [백준 B1 2869 달팽이는 올라가고 싶다]([https://beansbin.notion.site/B4-1712-8a492a77016a4bef9318a8a3b9967109](https://beansbin.notion.site/B1-2869-72c0ef039e8d49909638a3396f99fc29))</center> |
 
 
 
