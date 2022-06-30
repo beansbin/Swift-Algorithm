@@ -157,6 +157,57 @@ bfs(graph, 1, &visited)
 
 <br/>
 
+### 정렬 알고리즘(Sorting)
+* 미리 만들어진 라이브러리를 사용하는 것이 효과적인 경우가 많음
+* 정렬 알고리즘 문제는 외워서 잘 풀어낼 수 있는 문제
+
+`Bubble Sort`, `Selection Sort`, `Insertion Sort`, `Merge Sort`, `Heap Sort`, `Quick Sort`
+
+**Bubble Sort**
+가장 큰 값을 배열의 맨 끝에다 이동시키면서 정렬하고자 하는 원소의 개수 만큼을 두 번 반복하게 됨.
+
+|실행 시간의 상한|실행 시간의 하한|
+|:------:|:---:|
+|O(n^2)|O(n^2)|
+
+```swift
+for i in 0..<list.count {
+  for j in 0..<list.count - i - 1 {
+    if list[j] > list[j + 1] {
+      let temp = list[j]
+      list[j] = list[j + 1]
+      list[j + 1] = temp 
+    }
+  }
+}
+```
+
+**Selection Sort**
+가장 작은 데이터를 선택해 첫 번째 데이터와 바꾸고, 그 다음 작은 데이터를 선택해 두 번째 데이터와 바꾸는 정렬 방법.
+
+|실행 시간의 상한|실행 시간의 하한|
+|:------:|:---:|
+|O(n^2)|O(n^2)|
+
+```swift
+for i in 0..<list.count {
+  var minValue = 999
+  var index = 0
+  for j in i..<list.count {
+    if list[j] < minValue {
+      minValue = list[j]
+      index = j
+    }
+  }
+  var temp = list[i]
+  temp = list[i]
+  list[i] = minValue
+  list[index] = temp
+}
+```
+
+
+
 ### 스위프트 자료구조
 **스택(Stack), LIFO**
 * 리스트와 메소드를 사용해서 구현 가능
