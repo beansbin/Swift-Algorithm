@@ -60,7 +60,6 @@ print(count)
 
 <br/>
 
-
 ### DFS/BFS
 **DFS(Depth First Search, 깊이 우선 탐색)**
 * 필요한 개념 : [재귀 함수](#재귀-함수(Recursive-Function)), [그래프](#그래프(Graph))
@@ -73,7 +72,6 @@ print(count)
 2) 스택의 최상단 노드에 방문하지 않은 인접 노드가 있으면, 그 인접 노드를 스택에 넣고 방문 처리를 한다. 방문하지 않은 인접 노드가 없으면 스택에서 최상단 노드를 꺼냄
 3) 2번의 과정을 더 이상 수행할 수 없을 때까지 반복
 
-<br/>
 
 ```swift
 // DFS 메서드 정의
@@ -206,7 +204,103 @@ for i in 0..<list.count {
 }
 ```
 
+<br/>
 
+### 이진 탐색(Binary Search)
+* 배열 내부의 데이터가 정렬되어있어야 사용 가능
+* 단계를 거칠 때마다 확인하는 원소가 평균적으로 절반으로 줄어듦
+* 시간 복잡도 : O(logN)
+* 반복적, 재귀적 두 가지 방법으로 구현 가능
+* 탐색 범위가 큰 경우 이진 탐색으로 접근
+
+```swift
+while startIndex <= endIndex {
+  if list[middleIndex] == value {
+    index = middleIndex
+    break
+  } 
+
+  if list[middleIndex] > value {
+    startIndex = middleIndex + 1
+  } else if list[middleIndex] < value {
+    endIndex = middleIndex - 1
+  }
+}
+```
+
+<br/>
+
+### 다이나믹 프로그래밍(DP, Dynamic Programming)
+* 복잡한 문제를 여러 개의 하위 문제로 나누어 메모리를 사용하는 대신 시간을 줄이는 방법.
+* 완전 탐색으로 접근했을 때 시간이 오래걸리는 경우 적용 가능한지 확인
+* 코딩 테스트에서는 대체로 간단한 형태로 출제
+* DP 테이블 : 보텀업(bottom-up) 방식에서 사용되는 결과 저장용 리스트
+* 메모이제이션(Memoization) : 탑다운(top-down) 방식에서 사용되는 이전에 계산된 결과를 일시적으로 저장해놓는 리스트
+
+**DP를 사용할 수 있는 조건**
+1) 큰 문제를 작은 문제들로 나눌 수 있다.
+2) 작은 문제에서 구한 정답이 큰 문제에서도 사용된다.
+
+**DP 구현 방식 2가지**
+1) 보텀업(bottom-up) 방식
+* 작은 문제부터 차근 차근 답을 도출하는 방식
+* 반복문 형태
+* 다이나믹 프로그래밍의 전형적인 형태
+
+```swift
+// DP 테이블
+var d = Array(repeating:0, count:100)
+
+d[1] = 1
+d[2] = 1
+let n = 99
+
+for i in 3..<n+1 {
+  d[i] = d[i-1] + d[i-2]
+}
+```
+
+2) 탑다운(top-down) 방식
+* 큰 문제를 해결하기 위해 작은 문제를 해결하는 방식
+* 재귀함수 형태
+* 값이 중복되더라도 함수를 사용하는데 드는 오버헤드가 발생하므로 보텀업 방식이 더 효율적
+
+```swift
+var d = Array(repeating:0, count:100)
+
+func fibo(_ x: Int) -> Int {
+  if x == 1 || x == 2 {
+    d[x] = 1
+    return 1
+  }
+  if d[x] != 0 {
+    return d[x]
+  }
+  d[x] = fibo(x-1) + fibo(x-2)
+  return d[x]
+}
+```
+<br/>
+
+### 분할 정복(Divide and Conquer)
+* 큰 문제를 작은 문제로 쪼개어 답을 찾는 방식, 탑다운(top-down) 접근법 사용
+* 하부구조가 반복되지 않는 문제를 해결할 때 사용
+* DP와의 차이점 : 다이나믹 프로그래밍들의 문제들은 서로 영향을 미침(overlapping)
+
+**접근 방법**
+
+**DP vs Divide and Conquer vs Greedy**
+
+|Divide and Conquer|Dynamic Programming|Greedy|
+ |:---:|:---:|:---:|
+ |non-overlapping한 문제를 작은 문제로 쪼개어 해결하는데 non-overlapping|overlapping substructure를 갖는 문제를 해결한다.|각 단계에서의 최적의 선택을 통해 해결한다.|
+ |top-down 접근|top-down, bottom-up 접근||
+ |재귀 함수를 사용한다.|재귀적 관계(점화식)를 이용한다.(점화식)|반복문을 사용한다.|
+ |call stack을 통해 답을 구한다.|look-up-table, 즉 행렬에 반복적인 구조의 solution을 저장해 놓는 방식으로 답을 구한다.|solution set에 단계별 답을 추가하는 방식으로 답을 구한다.|
+ |분할 - 정복 - 병합|점화식 도출 - look-up-table에 결과 저장 - 나중에 다시 꺼내씀|단계별 최적의 답을 선택 - 조건에 부합하는지 확인 - 마지막에 전체조건에 부합하는지 확인|
+ |이진탐색, 퀵정렬, 합병정렬|최적화 이진탐색, 이항계수 구하기, 플로이드-와샬|크루스칼, 프림, 다익스트라, 벨만-포드|
+
+<br/>
 
 ### 스위프트 자료구조
 **스택(Stack), LIFO**
@@ -285,6 +379,12 @@ graph[0].append((0, 5))
 
 <br/>
 
+**트리(Tree)**
+* 사이클(Cycle)이 존재하지 않는 그래프
+* 이진 탐색 트리 : 왼쪽 자식 노드 < 부모 노드 < 오른쪽 자식 노드
+
+<br/>
+
 ## 필수 개념
 
 ### 재귀 함수(Recursive Function)
@@ -328,4 +428,5 @@ func factorial_recursive(_ n: Int) -> Int {
 
 ### 참고 링크
 [Interview_Question_for_Beginner](https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Algorithm)
+
 이것이 코딩테스트다 - 한빛 미디어(나동빈 저)
