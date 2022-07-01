@@ -206,6 +206,21 @@ for i in 0..<list.count {
 
 <br/>
 
+** 정렬 알고리즘 시간 복잡도 비교 **
+|   Algorithm    | Space Complexity | (average) Time Complexity | (worst) Time Complexity |
+| :------------: | :--------------: | :-----------------------: | :---------------------: |
+|  Bubble sort   |       O(1)       |          O(n^2)           |         O(n^2)          |
+| Selection sort |       O(1)       |          O(n^2)           |         O(n^2)          |
+| Insertion sort |       O(1)       |          O(n^2)           |         O(n^2)          |
+|   Merge sort   |       O(n)       |         O(nlogn)          |        O(nlogn)         |
+|   Heap sort    |       O(1)       |         O(nlogn)          |        O(nlogn)         |
+|   Quick sort   |       O(1)       |         O(nlogn)          |         O(n^2)          |
+|   Count sort   |       O(n)       |           O(n)            |          O(n)           |
+|   Radix sort   |       O(n)       |           O(n)            |          O(n)           |
+
+
+<br/>
+
 ### 이진 탐색(Binary Search)
 * 배열 내부의 데이터가 정렬되어있어야 사용 가능
 * 단계를 거칠 때마다 확인하는 원소가 평균적으로 절반으로 줄어듦
