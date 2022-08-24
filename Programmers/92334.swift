@@ -1,68 +1,34 @@
 import Foundation
 
 func solution(_ id_list:[String], _ report:[String], _ k:Int) -> [Int] {
-    var idArray = [[String]]()
-    var stopIdCountDic = [String: Int]()
-    for i in id_list {
-        stopIdCountDic[i] = 0
-    }
-
-    for i in (0..<id_list.count) {
-        idArray.append([id_list[i]])
+    
+    var result = Array(repeating: 0, count: id_list.count)
+    let reportSet = Set(report)
+    var userDict: [String: Int] = [:]
+    for id in id_list {
+        userDict[id] = 0
     }
     
-    for i in (0..<report.count) {
-        let reportAndReported = report[i].split(separator: " ")
-        idArray[findIndex(String(reportAndReported[0]), id_list)].append(String(reportAndReported[1]))
+    // 각 유저가 신고
+    for item in reportSet {
+        let list = item.components(separatedBy: " ")
+        userDict[list[1]]! += 1
     }
     
-    var userCountArray: [[String]] = Array(repeating: Array(repeating: "", count: 0), count: id_list.count)
-    
-    for i in (0..<idArray.count) {
-        for j in (1..<idArray[i].count) {
-            if !userCountArray[i].contains(idArray[i][j]) {
-                  userCountArray[i].append(idArray[i][j])
-            }
-        }
-    }
-    
-    for i in userCountArray {
-        for j in i {
-            if stopIdCountDic.keys.contains(j) {
-                stopIdCountDic[j]! += 1
-            }
-        }
-    }
-    
-    var stopIdArray = [String]()
-    
-    for (key, value) in stopIdCountDic {
-        if value >= k {
-            stopIdArray.append(key)
-        }
-    }
-    
-    var resultArray: [Int] = Array(repeating: 0, count: id_list.count)
-    
-    for i in (0..<userCountArray.count) {
-        for j in (0..<userCountArray[i].count) {
-             for k in stopIdArray {
-                if userCountArray[i][j] == k {
-                    resultArray[i] += 1
+    // 신고된 유저 확인
+    let reportedUsers = Array(userDict.filter {$0.1 >= k}.keys)
+    for item in reportSet {
+        let list = item.components(separatedBy: " ")
+        var isContain = false
+        for i in 0..<reportedUsers.count where reportedUsers[i] == list[1] {
+            for j in 0..<id_list.count {
+                if id_list[j] == list[0] {
+                    result[j] += 1
                 }
             }
+            break
         }
     }
-    print(userCountArray)
-
-    return resultArray
-}
-
-func findIndex(_ findId: String, _ id_list: [String]) -> Int {
-    for i in (0..<id_list.count) {
-        if findId == id_list[i] {
-            return i
-        }
-    }
-    return -1
+    
+    return result
 }
